@@ -84,12 +84,6 @@ define({ "api": [
             "optional": false,
             "field": "Authorization",
             "description": "<p>JWT authentication token.</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Learning",
-            "description": "<p>Lab Permissions.</p>"
           }
         ]
       }
@@ -186,12 +180,6 @@ define({ "api": [
           {
             "group": "Header",
             "optional": false,
-            "field": "Learning",
-            "description": "<p>Lab Permissions.</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
             "field": "Authorization",
             "description": "<p>JWT authentication token.</p>"
           }
@@ -257,12 +245,6 @@ define({ "api": [
             "optional": false,
             "field": "Authorization",
             "description": "<p>JWT authentication token.</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Learning",
-            "description": "<p>Lab Permissions.</p>"
           }
         ]
       }
@@ -282,21 +264,21 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "name",
-            "description": "<p>The name of Learning Lab Category</p>"
+            "description": "<p>Name of the Learning Lab Category</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
             "field": "description",
-            "description": "<p>The description of category</p>"
+            "description": "<p>Descriptions of the category</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
             "field": "color",
-            "description": "<p>The color code of category</p>"
+            "description": "<p>Color code of the category</p>"
           },
           {
             "group": "Parameter",
@@ -314,7 +296,7 @@ define({ "api": [
   {
     "type": "patch",
     "url": "/learningLab/",
-    "title": "EditLearning Lab Category",
+    "title": "Edit Learning Lab Category",
     "name": "Edit_Learning_Lab_Category",
     "description": "<p>Edit Learning Lab Category</p>",
     "group": "Learning_Lab",
@@ -333,12 +315,6 @@ define({ "api": [
             "optional": false,
             "field": "Authorization",
             "description": "<p>JWT authentication token.</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Learning",
-            "description": "<p>Lab Permissions.</p>"
           }
         ]
       }
@@ -455,12 +431,6 @@ define({ "api": [
           {
             "group": "Header",
             "optional": false,
-            "field": "Learning",
-            "description": "<p>Lab Permissions.</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
             "field": "Authorization",
             "description": "<p>JWT authentication token.</p>"
           }
@@ -501,12 +471,6 @@ define({ "api": [
             "optional": false,
             "field": "Authorization",
             "description": "<p>JWT authentication token.</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Learning",
-            "description": "<p>Lab Permissions.</p>"
           }
         ]
       }
@@ -530,12 +494,6 @@ define({ "api": [
             "optional": false,
             "field": "Content-Type",
             "description": "<p>application/json.</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Learning",
-            "description": "<p>Lab Permissions.</p>"
           },
           {
             "group": "Header",
@@ -565,12 +523,6 @@ define({ "api": [
             "optional": false,
             "field": "Content-Type",
             "description": "<p>application/json.</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Learning",
-            "description": "<p>Lab Permissions.</p>"
           },
           {
             "group": "Header",
@@ -669,12 +621,6 @@ define({ "api": [
             "optional": false,
             "field": "Content-Type",
             "description": "<p>application/json.</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Learning",
-            "description": "<p>Lab Permissions.</p>"
           },
           {
             "group": "Header",
@@ -779,12 +725,6 @@ define({ "api": [
             "optional": false,
             "field": "Authorization",
             "description": "<p>JWT authentication token.</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Learning",
-            "description": "<p>Lab Permissions.</p>"
           }
         ]
       }
@@ -821,12 +761,6 @@ define({ "api": [
             "optional": false,
             "field": "Content-Type",
             "description": "<p>application/json.</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Learning",
-            "description": "<p>Lab Permissions.</p>"
           },
           {
             "group": "Header",
@@ -925,12 +859,6 @@ define({ "api": [
             "optional": false,
             "field": "Content-Type",
             "description": "<p>application/json.</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Learning",
-            "description": "<p>Lab Permissions.</p>"
           },
           {
             "group": "Header",
