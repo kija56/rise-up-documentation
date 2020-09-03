@@ -64,7 +64,7 @@
   },
   {
     "type": "post",
-    "url": "/api/v2/learningLab/lab-contents/",
+    "url": "/learningLab/lab-contents/",
     "title": "Post Lab Contents Data",
     "name": "Create_Lab_Contents",
     "description": "<p>Create learning lab contents</p>",
@@ -168,7 +168,7 @@
   },
   {
     "type": "post",
-    "url": "/api/v2/learningLab/lab-contents/:contentId/status",
+    "url": "/learningLab/lab-contents/:contentId/status",
     "title": "Accept or Reject Learning Lab Content",
     "name": "Create_Lab_Contents",
     "description": "<p>Create learning lab contents</p>",
@@ -237,7 +237,7 @@
   },
   {
     "type": "post",
-    "url": "/api/v2/learningLab",
+    "url": "/learningLab",
     "title": "Create Learning Lab Category",
     "name": "Create_Learning_Lab_Category",
     "description": "<p>Create Learning Lab Category</p>",
@@ -313,7 +313,7 @@
   },
   {
     "type": "patch",
-    "url": "/api/v2/learningLab/",
+    "url": "/learningLab/",
     "title": "EditLearning Lab Category",
     "name": "Edit_Learning_Lab_Category",
     "description": "<p>Edit Learning Lab Category</p>",
@@ -389,7 +389,7 @@
   },
   {
     "type": "delete",
-    "url": "/api/v2/learningLab/:labId",
+    "url": "/learningLab/:labId",
     "title": "Delete Learning Lab Category",
     "name": "Full_Delete_Learning_Lab_Category",
     "description": "<p>Deletes Learning Lab Category permanently</p>",
@@ -437,7 +437,7 @@
   },
   {
     "type": "get",
-    "url": "/api/v2/learningLab/lab-contents",
+    "url": "/learningLab/lab-contents",
     "title": "Get Lab Contents Data",
     "name": "Get_Lab_Contents",
     "description": "<p>Get learning lab contents</p>",
@@ -481,7 +481,7 @@
   },
   {
     "type": "get",
-    "url": "/api/v2/learningLab/",
+    "url": "/learningLab/",
     "title": "Get all learning lab categories",
     "name": "Get_Learning_Lab_Categories",
     "description": "<p>Fetches all learning lab categories</p>",
@@ -516,7 +516,7 @@
   },
   {
     "type": "get",
-    "url": "/api/v2/learningLab/:labId",
+    "url": "/learningLab/:labId",
     "title": "",
     "name": "Get_single_lab_category",
     "description": "<p>Fetch a single learning lab category</p>",
@@ -551,7 +551,7 @@
   },
   {
     "type": "post",
-    "url": "/api/v2/learningLab/lab-contents/publish",
+    "url": "/learningLab/lab-contents/publish",
     "title": "Publish lab content",
     "name": "Publish_Lab_content",
     "description": "<p>Publish learning lab contents</p>",
@@ -655,7 +655,7 @@
   },
   {
     "type": "post",
-    "url": "/api/v2/learningLab/lab-contents/save",
+    "url": "/learningLab/lab-contents/save",
     "title": "Save to Draft",
     "name": "Save_lab_content_to_draft",
     "description": "<p>Save learning lab content to draft</p>",
@@ -759,7 +759,7 @@
   },
   {
     "type": "delete",
-    "url": "/api/v2/learningLab/:labId",
+    "url": "/learningLab/:labId",
     "title": "Delete Learning Lab Category",
     "name": "Soft_Delete_Learning_Lab_Category",
     "description": "<p>Soft deletes Learning Lab Category</p>",
@@ -807,7 +807,7 @@
   },
   {
     "type": "post",
-    "url": "/api/v2/learningLab/lab-contents/suggest",
+    "url": "/learningLab/lab-contents/suggest",
     "title": "Suggest Lab Content",
     "name": "Submit_contents_for_review",
     "description": "<p>Suggest learning lab contents for review</p>",
@@ -911,7 +911,7 @@
   },
   {
     "type": "put",
-    "url": "/api/v2/learningLab/lab-contents",
+    "url": "/learningLab/lab-contents",
     "title": "Update Lab Contents Data",
     "name": "Update_Lab_Contents",
     "description": "<p>Update learning lab contents</p>",
