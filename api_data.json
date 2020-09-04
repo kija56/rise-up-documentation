@@ -122,6 +122,13 @@
           {
             "group": "Parameter",
             "type": "String",
+            "optional": true,
+            "field": "coverUrl",
+            "description": "<p>Cover image if the article has no imageUrl</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
             "optional": false,
             "field": "description",
             "description": "<p>Brief description of the content</p>"
@@ -283,7 +290,7 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "code",
             "description": "<p>Random generated code for each category</p>"
           }
@@ -353,7 +360,7 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "code",
             "description": "<p>Random generated code for each category</p>"
           }
@@ -365,7 +372,7 @@
   },
   {
     "type": "delete",
-    "url": "/learningLab/:labId",
+    "url": "/learningLab/soft/:labId",
     "title": "Delete Learning Lab Category",
     "name": "Full_Delete_Learning_Lab_Category",
     "description": "<p>Deletes Learning Lab Category permanently</p>",
@@ -567,6 +574,13 @@
           {
             "group": "Parameter",
             "type": "String",
+            "optional": true,
+            "field": "coverUrl",
+            "description": "<p>Cover image if the article has no imageUrl</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
             "optional": false,
             "field": "description",
             "description": "<p>Brief description of the content</p>"
@@ -661,6 +675,13 @@
             "optional": false,
             "field": "source",
             "description": "<p>The source of content</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "coverUrl",
+            "description": "<p>Cover image if the article has no imageUrl</p>"
           },
           {
             "group": "Parameter",
@@ -805,6 +826,13 @@
           {
             "group": "Parameter",
             "type": "String",
+            "optional": true,
+            "field": "coverUrl",
+            "description": "<p>Cover image if the article has no imageUrl</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
             "optional": false,
             "field": "description",
             "description": "<p>Brief description of the content</p>"
@@ -873,7 +901,7 @@
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "\"content\": {\n   \"title\": \"Learning lab contents data\",\n   \"type\":\"video,\n   \"resource\":\"www.youtube.com/sTYfa\",\n   \"source\":\"www.youtube.com\",\n   \"category\":[\"categoryId\"],\n   \"description\":\"This is descriptions\",\n   \"mainTag\":[\"tagId\"],\n  \"otherTags\":[\"tagId\"]\n }",
+          "content": "\"content\": {\n   \"title\": \"Learning lab contents data\",\n   \"type\":\"article,\n   \"resource\":\"www.google.com\",\n   \"source\":\"www.youtube.com\",\n   \"category\":[\"categoryId\"],\n   \"description\":\"This is descriptions\",\n   \"mainTag\":[\"tagId\"],\n    \"coverUrl\":\"www.url.co.tz\",\n  \"otherTags\":[\"tagId\"]\n }",
           "type": "json"
         }
       ],
@@ -896,6 +924,13 @@
           {
             "group": "Parameter",
             "type": "String",
+            "optional": true,
+            "field": "coverUrl",
+            "description": "<p>Cover url for articles with no imageUrl</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
             "optional": false,
             "field": "type",
             "description": "<p>The type of posted content</p>"
@@ -910,7 +945,7 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "description",
             "description": "<p>Brief description of the content</p>"
           },
