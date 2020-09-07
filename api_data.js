@@ -64,6 +64,69 @@ define({ "api": [
   },
   {
     "type": "post",
+    "url": "/learningLab/lab-contents/:contentId/status",
+    "title": "Accept or Reject Learning Lab Content",
+    "name": "Accept/Reject_Lab_Content",
+    "description": "<p>Accept or reject lab contents</p>",
+    "group": "Learning_Lab",
+    "version": "0.2.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Content-Type",
+            "description": "<p>application/json.</p>"
+          },
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>JWT authentication token.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "\"content\": {\n   \"status\": 2,\n   \"remarks\":\"Not valid content\"\n }",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "contentId",
+            "description": "<p>The Id of content to be accepted or rejected</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "status",
+            "description": "<p>The status of response 1 for accept and 2 for reject</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "remarks",
+            "description": "<p>Comments for rejected content</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/modules/learningLabs/routes/index.ts",
+    "groupTitle": "Learning_Lab"
+  },
+  {
+    "type": "post",
     "url": "/learningLab/lab-contents/",
     "title": "Post Lab Contents Data",
     "name": "Create_Lab_Contents",
@@ -160,69 +223,6 @@ define({ "api": [
             "optional": false,
             "field": "otherTags",
             "description": "<p>Array of Tag Ids</p>"
-          }
-        ]
-      }
-    },
-    "filename": "src/modules/learningLabs/routes/index.ts",
-    "groupTitle": "Learning_Lab"
-  },
-  {
-    "type": "post",
-    "url": "/learningLab/lab-contents/:contentId/status",
-    "title": "Accept or Reject Learning Lab Content",
-    "name": "Create_Lab_Contents",
-    "description": "<p>Create learning lab contents</p>",
-    "group": "Learning_Lab",
-    "version": "0.2.0",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Content-Type",
-            "description": "<p>application/json.</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Authorization",
-            "description": "<p>JWT authentication token.</p>"
-          }
-        ]
-      }
-    },
-    "parameter": {
-      "examples": [
-        {
-          "title": "Request-Example:",
-          "content": "\"content\": {\n   \"status\": 2,\n   \"remarks\":\"Not valid content\"\n }",
-          "type": "json"
-        }
-      ],
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "contentId",
-            "description": "<p>The Id of content to be accepted or rejected</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "status",
-            "description": "<p>The status of response 1 for accept and 2 for reject</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "remarks",
-            "description": "<p>Comments for rejected content</p>"
           }
         ]
       }
