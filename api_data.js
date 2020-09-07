@@ -421,6 +421,44 @@ define({ "api": [
   {
     "type": "get",
     "url": "/learningLab/lab-contents",
+    "title": "Get Draft Lab Contents Data",
+    "name": "Get_Drafts_Contents",
+    "description": "<p>Get all learning lab contents saved to draft</p>",
+    "group": "Learning_Lab",
+    "version": "0.2.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Content-Type",
+            "description": "<p>application/json.</p>"
+          },
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>JWT authentication token.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Request-Response:",
+          "content": "\"contents\" : [\n   {\n       \"_id\": \"5f51f4e0e0e7f300044eabce\",\n       \"likes_count\": 0,\n       \"search_count\": 0,\n       \"shares_count\": 0,\n       \"views_count\": 0,\n       \"approvedStatus\": \"pending\",\n       \"mainTag\": [],\n       \"otherTags\": [],\n       \"category\": [\n           \"5ee2de2f8870ad0004f0ea8f\"\n       ],\n       \"ageRange\": [],\n       \"viewedBy\": [],\n       \"likedBy\": [],\n       \"status\":0,\n       \"sharedBy\": [],\n       \"deleted\": false,\n       \"source\": \"youtube.co.tz\",\n       \"title\": \"All of the stars\",\n       \"resource\": \"Write your article\",\n       \"userType\": \"1\",\n       \"readStatus\": true,\n       \"createdAt\": \"2020-09-04T08:03:44.280Z\",\n       \"updatedAt\": \"2020-09-04T08:03:44.280Z\",\n       \"__v\": 0,\n       \"createdBy\": \"\"\n   },",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/modules/learningLabs/routes/index.ts",
+    "groupTitle": "Learning_Lab"
+  },
+  {
+    "type": "get",
+    "url": "/learningLab/lab-contents",
     "title": "Get Lab Contents Data",
     "name": "Get_Lab_Contents",
     "description": "<p>Get learning lab contents</p>",
