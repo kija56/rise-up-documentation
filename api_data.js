@@ -89,13 +89,6 @@ define({ "api": [
       }
     },
     "parameter": {
-      "examples": [
-        {
-          "title": "Request-Example:",
-          "content": "\"content\": {\n   \"status\": 2,\n   \"remarks\":\"Not valid content\"\n }",
-          "type": "json"
-        }
-      ],
       "fields": {
         "Parameter": [
           {
@@ -115,7 +108,7 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "remarks",
             "description": "<p>Comments for rejected content</p>"
           }
