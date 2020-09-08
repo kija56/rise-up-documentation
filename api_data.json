@@ -413,7 +413,7 @@
   },
   {
     "type": "get",
-    "url": "/learningLab/lab-contents",
+    "url": "/learningLab/lab-contents/drafts",
     "title": "Get Draft Lab Contents Data",
     "name": "Get_Drafts_Contents",
     "description": "<p>Get all learning lab contents saved to draft</p>",
