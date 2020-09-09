@@ -225,6 +225,111 @@ define({ "api": [
   },
   {
     "type": "post",
+    "url": "/learningLab/lab-contents/",
+    "title": "Post Lab Contents Data",
+    "name": "Create_Lab_Contents",
+    "description": "<p>Create learning lab contents</p>",
+    "group": "Learning_Lab",
+    "version": "0.2.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Content-Type",
+            "description": "<p>application/json.</p>"
+          },
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>JWT authentication token.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "\"content\": {\n   \"title\": \"Learning lab contents data\",\n   \"type\":\"video,\n   \"resource\":\"www.youtube.com/sTYfa\",\n   \"source\":\"www.youtube.com\",\n   \"category\":[\"categoryId\"],\n   \"description\":\"This is descriptions\",\n   \"mainTag\":[\"tagId\"],\n  \"otherTags\":[\"tagId\"]\n }",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>The title of content</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "type",
+            "description": "<p>The type of posted content</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "source",
+            "description": "<p>The source of content</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "coverUrl",
+            "description": "<p>Cover image if the article has no imageUrl</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "description",
+            "description": "<p>Brief description of the content</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "resource",
+            "description": "<p>The resource or content of the post</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "category",
+            "description": "<p>Array of category Ids</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "mainTag",
+            "description": "<p>Array of Tag Ids</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "otherTags",
+            "description": "<p>Array of Tag Ids</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/modules/learningLabs/routes/index.ts",
+    "groupTitle": "Learning_Lab"
+  },
+  {
+    "type": "post",
     "url": "/learningLab",
     "title": "Create Learning Lab Category",
     "name": "Create_Learning_Lab_Category",
@@ -286,6 +391,35 @@ define({ "api": [
             "optional": true,
             "field": "code",
             "description": "<p>Random generated code for each category</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/modules/learningLabs/routes/index.ts",
+    "groupTitle": "Learning_Lab"
+  },
+  {
+    "type": "delete",
+    "url": "/learningLab/lab-contents/contentId",
+    "title": "Delete Learning Lab Content",
+    "name": "Delete_Learning_lab_Content",
+    "description": "<p>Delete learning lab contents</p>",
+    "group": "Learning_Lab",
+    "version": "0.2.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Content-Type",
+            "description": "<p>application/json.</p>"
+          },
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>JWT authentication token.</p>"
           }
         ]
       }
@@ -413,7 +547,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/learningLab/lab-contents/drafts",
+    "url": "/learningLab/lab-contents",
     "title": "Get Draft Lab Contents Data",
     "name": "Get_Drafts_Contents",
     "description": "<p>Get all learning lab contents saved to draft</p>",
@@ -538,6 +672,111 @@ define({ "api": [
             "optional": false,
             "field": "Authorization",
             "description": "<p>JWT authentication token.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/modules/learningLabs/routes/index.ts",
+    "groupTitle": "Learning_Lab"
+  },
+  {
+    "type": "post",
+    "url": "/learningLab/lab-contents/publish",
+    "title": "Publish lab content",
+    "name": "Publish_Lab_content",
+    "description": "<p>Publish learning lab contents</p>",
+    "group": "Learning_Lab",
+    "version": "0.2.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Content-Type",
+            "description": "<p>application/json.</p>"
+          },
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>JWT authentication token.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "\"content\": {\n   \"title\": \"Learning lab contents data\",\n   \"type\":\"video,\n   \"resource\":\"www.youtube.com/sTYfa\",\n   \"source\":\"www.youtube.com\",\n   \"category\":[\"categoryId\"],\n   \"description\":\"This is descriptions\",\n   \"mainTag\":[\"tagId\"],\n  \"otherTags\":[\"tagId\"]\n }",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>The title of content</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "type",
+            "description": "<p>The type of posted content</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "source",
+            "description": "<p>The source of content</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "coverUrl",
+            "description": "<p>Cover image if the article has no imageUrl</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "description",
+            "description": "<p>Brief description of the content</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "resource",
+            "description": "<p>The resource or content of the post</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "category",
+            "description": "<p>Array of category Ids</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "mainTag",
+            "description": "<p>Array of Tag Ids</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "otherTags",
+            "description": "<p>Array of Tag Ids</p>"
           }
         ]
       }
