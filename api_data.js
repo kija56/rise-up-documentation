@@ -148,7 +148,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "\"content\": {\n   \"title\": \"Learning lab contents data\",\n   \"type\":\"video,\n   \"resource\":\"www.youtube.com/sTYfa\",\n   \"source\":\"www.youtube.com\",\n   \"category\":[\"categoryId\"],\n   \"description\":\"This is descriptions\",\n   \"mainTag\":[\"tagId\"],\n  \"otherTags\":[\"tagId\"]\n }",
+          "content": "\"content\": {\n   \"title\": \"Learning lab contents data\",\n   \"type\":\"video,\n   \"resource\":\"www.youtube.com/sTYfa\",\n   \"source\":\"www.youtube.com\",\n   \"category\":[\"categoryId\"],\n   \"description\":\"This is descriptions\",\n   \"tags\":[\"games\"],\n  \n }",
           "type": "json"
         }
       ],
@@ -207,15 +207,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "Array",
             "optional": false,
-            "field": "mainTag",
-            "description": "<p>Array of Tag Ids</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Array",
-            "optional": false,
-            "field": "otherTags",
-            "description": "<p>Array of Tag Ids</p>"
+            "field": "tags",
+            "description": "<p>Array of Tags</p>"
           }
         ]
       }
@@ -422,7 +415,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Request-Response:",
-          "content": "\"contents\" : [\n   {\n       \"_id\": \"5f51f4e0e0e7f300044eabce\",\n       \"likes_count\": 0,\n       \"search_count\": 0,\n       \"shares_count\": 0,\n       \"views_count\": 0,\n       \"approvedStatus\": \"pending\",\n       \"mainTag\": [],\n       \"otherTags\": [],\n       \"category\": [\n           \"5ee2de2f8870ad0004f0ea8f\"\n       ],\n       \"ageRange\": [],\n       \"viewedBy\": [],\n       \"likedBy\": [],\n       \"status\":0,\n       \"sharedBy\": [],\n       \"deleted\": false,\n       \"source\": \"youtube.co.tz\",\n       \"title\": \"All of the stars\",\n       \"resource\": \"Write your article\",\n       \"userType\": \"1\",\n       \"readStatus\": true,\n       \"createdAt\": \"2020-09-04T08:03:44.280Z\",\n       \"updatedAt\": \"2020-09-04T08:03:44.280Z\",\n       \"__v\": 0,\n       \"createdBy\": \"\"\n   },",
+          "content": "\"contents\" : [\n   {\n       \"_id\": \"5f51f4e0e0e7f300044eabce\",\n       \"likes_count\": 0,\n       \"search_count\": 0,\n       \"shares_count\": 0,\n       \"views_count\": 0,\n       \"approvedStatus\": \"pending\",\n       \"tags\": [],\n       \"category\": [\n           \"5ee2de2f8870ad0004f0ea8f\"\n       ],\n       \"ageRange\": [],\n       \"viewedBy\": [],\n       \"likedBy\": [],\n       \"status\":0,\n       \"sharedBy\": [],\n       \"deleted\": false,\n       \"source\": \"youtube.co.tz\",\n       \"title\": \"All of the stars\",\n       \"resource\": \"Write your article\",\n       \"userType\": \"1\",\n       \"readStatus\": true,\n       \"createdAt\": \"2020-09-04T08:03:44.280Z\",\n       \"updatedAt\": \"2020-09-04T08:03:44.280Z\",\n       \"__v\": 0,\n       \"createdBy\": \"\"\n   },",
           "type": "json"
         }
       ]
@@ -460,7 +453,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Request-Response:",
-          "content": "\"content\": {\n   \"title\": \"Learning lab contents data\",\n   \"type\":\"video,\n   \"resource\":\"www.youtube.com/sTYfa\",\n   \"source\":\"www.youtube.com\",\n   \"category\":[\"categoryId\"],\n   \"description\":\"This is descriptions\",\n   \"mainTag\":[\"tagId\"],\n  \"otherTags\":[\"tagId\"]\n }",
+          "content": "\"content\": {\n   \"title\": \"Learning lab contents data\",\n   \"type\":\"video,\n   \"resource\":\"www.youtube.com/sTYfa\",\n   \"source\":\"www.youtube.com\",\n   \"category\":[\"categoryId\"],\n   \"description\":\"This is descriptions\",\n   \"tags\":[\"skills\"],\n  \n }",
           "type": "json"
         }
       ]
@@ -493,6 +486,44 @@ define({ "api": [
           }
         ]
       }
+    },
+    "filename": "src/modules/learningLabs/routes/index.ts",
+    "groupTitle": "Learning_Lab"
+  },
+  {
+    "type": "get",
+    "url": "/learningLab/tags",
+    "title": "Get all distinct tags",
+    "name": "Get_Tags",
+    "description": "<p>Fetches all tags</p>",
+    "group": "Learning_Lab",
+    "version": "0.2.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Content-Type",
+            "description": "<p>application/json.</p>"
+          },
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>JWT authentication token.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Request-Response:",
+          "content": " {\n    \"success\": true,\n    \"message\": \"Success\",\n    \"statusCode\": 6100,\n    \"data\": [\n        \"entertainment\",\n        \"games\",\n        \"health\",\n        \"football\",\n        \"medical\",\n        \"medicine\",\n        \"events\"\n    ]\n}",
+          "type": "json"
+        }
+      ]
     },
     "filename": "src/modules/learningLabs/routes/index.ts",
     "groupTitle": "Learning_Lab"
@@ -556,7 +587,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "\"content\": {\n   \"title\": \"Learning lab contents data\",\n   \"type\":\"video,\n   \"resource\":\"www.youtube.com/sTYfa\",\n   \"source\":\"www.youtube.com\",\n   \"category\":[\"categoryId\"],\n   \"description\":\"This is descriptions\",\n   \"mainTag\":[\"tagId\"],\n  \"otherTags\":[\"tagId\"]\n }",
+          "content": "\"content\": {\n   \"title\": \"Learning lab contents data\",\n   \"type\":\"video,\n   \"resource\":\"www.youtube.com/sTYfa\",\n   \"source\":\"www.youtube.com\",\n   \"category\":[\"categoryId\"],\n   \"description\":\"This is descriptions\",\n   \"tags\":[\"skills\"],\n  \n }",
           "type": "json"
         }
       ],
@@ -615,15 +646,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "Array",
             "optional": false,
-            "field": "mainTag",
-            "description": "<p>Array of Tag Ids</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Array",
-            "optional": false,
-            "field": "otherTags",
-            "description": "<p>Array of Tag Ids</p>"
+            "field": "tags",
+            "description": "<p>Array of Tags</p>"
           }
         ]
       }
@@ -661,7 +685,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "\"content\": {\n   \"title\": \"Learning lab contents data\",\n   \"type\":\"video,\n   \"resource\":\"www.youtube.com/sTYfa\",\n   \"source\":\"www.youtube.com\",\n   \"category\":[\"categoryId\"],\n   \"description\":\"This is descriptions\",\n   \"mainTag\":[\"tagId\"],\n  \"otherTags\":[\"tagId\"]\n }",
+          "content": "\"content\": {\n   \"title\": \"Learning lab contents data\",\n   \"type\":\"video,\n   \"resource\":\"www.youtube.com/sTYfa\",\n   \"source\":\"www.youtube.com\",\n   \"category\":[\"categoryId\"],\n   \"description\":\"This is descriptions\",\n   \"tags\":[\"games\"],\n  \n }",
           "type": "json"
         }
       ],
@@ -720,15 +744,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "Array",
             "optional": false,
-            "field": "mainTag",
-            "description": "<p>Array of Tag Ids</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Array",
-            "optional": false,
-            "field": "otherTags",
-            "description": "<p>Array of Tag Ids</p>"
+            "field": "tags",
+            "description": "<p>Array of Tags</p>"
           }
         ]
       }
@@ -808,7 +825,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "\"content\": {\n   \"title\": \"Learning lab contents data\",\n   \"type\":\"video,\n   \"resource\":\"www.youtube.com/sTYfa\",\n   \"source\":\"www.youtube.com\",\n   \"category\":[\"categoryId\"],\n   \"description\":\"This is descriptions\",\n   \"mainTag\":[\"tagId\"],\n  \"otherTags\":[\"tagId\"]\n }",
+          "content": "\"content\": {\n   \"title\": \"Learning lab contents data\",\n   \"type\":\"video,\n   \"resource\":\"www.youtube.com/sTYfa\",\n   \"source\":\"www.youtube.com\",\n   \"category\":[\"categoryId\"],\n   \"description\":\"This is descriptions\",\n   \"tags\":[\"medical\",\"health\"],\n\n }",
           "type": "json"
         }
       ],
@@ -867,15 +884,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "Array",
             "optional": false,
-            "field": "mainTag",
-            "description": "<p>Array of Tag Ids</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Array",
-            "optional": false,
-            "field": "otherTags",
-            "description": "<p>Array of Tag Ids</p>"
+            "field": "tags",
+            "description": "<p>Array of Tags</p>"
           }
         ]
       }
@@ -913,7 +923,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "\"content\": {\n   \"title\": \"Learning lab contents data\",\n   \"type\":\"article,\n   \"resource\":\"www.google.com\",\n   \"source\":\"www.youtube.com\",\n   \"category\":[\"categoryId\"],\n   \"description\":\"This is descriptions\",\n   \"mainTag\":[\"tagId\"],\n    \"coverUrl\":\"www.url.co.tz\",\n  \"otherTags\":[\"tagId\"]\n }",
+          "content": "\"content\": {\n   \"title\": \"Learning lab contents data\",\n   \"type\":\"article,\n   \"resource\":\"www.google.com\",\n   \"source\":\"www.youtube.com\",\n   \"category\":[\"categoryId\"],\n   \"description\":\"This is descriptions\",\n   \"tags\":[\"skills\"],\n    \"coverUrl\":\"www.url.co.tz\",\n  \n }",
           "type": "json"
         }
       ],
@@ -979,15 +989,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "Array",
             "optional": false,
-            "field": "mainTag",
-            "description": "<p>Array of Tag Ids</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Array",
-            "optional": false,
-            "field": "otherTags",
-            "description": "<p>Array of Tag Ids</p>"
+            "field": "tags",
+            "description": "<p>Array of Tags</p>"
           }
         ]
       }
